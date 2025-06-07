@@ -17,7 +17,7 @@ This Node.js script generates NGINX server configuration files for subdomains wi
 - Node.js installed on your server
 - NGINX installed and configured
 - Cloudflare account with domain management
-- Server with domain `server88.xyz` (or modify the script for your domain)
+- Server with domain `server.xyz` (or modify the script for your domain)
 
 ## Script Usage
 
@@ -35,13 +35,13 @@ node generateConfig.js <subdomain> <port>
 ### Examples
 
 ```bash
-# Generate config for api.server88.xyz pointing to localhost:3000
+# Generate config for api.server.xyz pointing to localhost:3000
 node generateConfig.js api 3000
 
-# Generate config for blog.server88.xyz pointing to localhost:8080
+# Generate config for blog.server.xyz pointing to localhost:8080
 node generateConfig.js blog 8080
 
-# Generate config for dashboard.server88.xyz pointing to localhost:4000
+# Generate config for dashboard.server.xyz pointing to localhost:4000
 node generateConfig.js dashboard 4000
 ```
 
@@ -122,7 +122,7 @@ The configuration expects the following SSL certificate files:
 ## Step 1: Access Cloudflare Dashboard
 
 1. Log in to your [Cloudflare Dashboard](https://dash.cloudflare.com)
-2. Select your domain (`server88.xyz`)
+2. Select your domain (`server.xyz`)
 
 ## Step 2: Navigate to SSL/TLS Settings
 
@@ -140,8 +140,8 @@ The configuration expects the following SSL certificate files:
 
 Add the hostnames you want to cover:
 ```
-*.server88.xyz
-server88.xyz
+*.server.xyz
+server.xyz
 ```
 
 This wildcard certificate will cover all subdomains.
